@@ -1,0 +1,33 @@
+from tkinter import *
+def proceed(windowmain):
+      windowmain.destroy()
+      
+def welcome():
+      windowmain = Tk()
+      windowmain.title('Welcome')
+      windowmain.attributes('-fullscreen',True)
+      Img = PhotoImage(file='\\\srlab\\tcdata\system28\Documents\Shourya_XII-A\Interstellar.png')
+      l1=Label(windowmain,image=Img)
+      l1.place(x=0,y=0)
+      l1.image= Img
+      Label(windowmain,text='WELCOME TO INTERSTELLAR',font=('Copperplate Gothic Bold',40),bg='black',fg='white').pack()
+      IMG1=PhotoImage(file="\\\srlab\\tcdata\system28\Documents\Shourya_XII-A\\mars - Copy.png")
+      IMG2=PhotoImage(file="\\\srlab\\tcdata\system28\Documents\Shourya_XII-A\\proxima - Copy.png")
+      IMG3=PhotoImage(file="\\\srlab\\tcdata\system28\Documents\Shourya_XII-A\\alpha - Copy.png")
+      IMG4=PhotoImage(file="\\\srlab\\tcdata\system28\Documents\Shourya_XII-A\\kepler - Copy.png")
+      lf1=LabelFrame(windowmain,text='Mars',height=315,width=315,font=('Copperplate Gothic Bold',20),bg='black',fg='white').place(x=70,y=100)
+      lf2=LabelFrame(windowmain,text='Proxima Centauri',height=315,width=315,font=('Copperplate Gothic Bold',20),bg='black',fg='white').place(x=380,y=100)
+      lf3=LabelFrame(windowmain,text='Alpha Centauri',height=315,width=315,font=('Copperplate Gothic Bold',20),bg='black',fg='white').place(x=690,y=100)
+      lf4=LabelFrame(windowmain,text='Kepler 452-B',height=315,width=315,font=('Copperplate Gothic Bold',20),bg='black',fg='white').place(x=1000,y=100)
+      LF1=Label(lf1,image=IMG1).place(x=80,y=130)
+      LF2=Label(lf2,image=IMG2).place(x=390,y=130)
+      LF3=Label(lf3,image=IMG3).place(x=700,y=130)
+      LF4=Label(lf4,image=IMG4).place(x=1010,y=130)
+      Button(windowmain,text='CONTINUE',font=('Copperplate Gothic Bold',20),command=lambda:proceed(windowmain)).place(x=590,y=700)
+      lf4=LabelFrame(windowmain,text='INSTRUCTIONS',height=250,width=1245,font=('Copperplate Gothic Bold',20),bg='black',fg='white').place(x=70,y=420)
+      LF5=Label(windowmain,text='STEP 1) LOGIN/SIGN UP ',font=('Copperplate Gothic Bold',15),bg='black',fg='white').place(x=80,y=450)
+      LF6=Label(windowmain,text='STEP 2) CHECK OUT OUR EXOTIC DESTINATIONS ',font=('Copperplate Gothic Bold',15),bg='black',fg='white').place(x=80,y=500)
+      LF7=Label(windowmain,text="STEP 3) LIFT-OFF : GIVE A BEGINNER'S TEST TO QUALIFY FOR SPACE TRAVEL ",font=('Copperplate Gothic Bold',15),bg='black',fg='white').place(x=80,y=550)
+      LF8=Label(windowmain,text="        IF YOU QUALIFY PROCEED WITH THE NEXT STEP ",font=('Copperplate Gothic Bold',15),bg='black',fg='white').place(x=130,y=580)
+      LF9=Label(windowmain,text='STEP 4) BOOK FOR YOUR FAVOURITE DESTINATION ',font=('Copperplate Gothic Bold',15),bg='black',fg='white').place(x=80,y=630)
+      windowmain.mainloop()
